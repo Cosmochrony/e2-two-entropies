@@ -45,7 +45,8 @@ the Admissible Pair Sector and the Full Residual Rank}
     removing the zero mode leaves the two-dimensional Born--Infeld parity pair
     $\{e_{\xi_c},e_{q-\xi_c}\}$, identified with the spin-$\tfrac12$ representation.
     The proto-state on this sector is the singlet, and its reduced state is maximally mixed,
-    so $\Sadm=\log 2$ for general canonical blocks, unconditionally.
+    so $\Sadm=\log 2$ for general canonical blocks, unconditionally relative to the cited
+    upstream theorems.
     This is the sector relevant to the singlet correlator and the Tsirelson bound.
     The second is the full residual fibre-level rank $\rpair(n)=R_\infty-R(n)$ defined on the
     full Gram--Schmidt basis (rank $q$ at saturation, not the rank-3 admissible projection).
@@ -70,6 +71,7 @@ the Admissible Pair Sector and the Full Residual Rank}
   \tableofcontents
 
   \newpage
+
   \section{Introduction}
     \label{sec:intro}
 
@@ -203,7 +205,9 @@ the Admissible Pair Sector and the Full Residual Rank}
     fixed by spectral atomicity and parity for any block parameters.
     It does not require a canonical identification of the full residual supports.
     The admissible pair entropy is therefore $\log 2$ for general canonical blocks,
-    unconditionally.
+    unconditionally relative to the cited upstream theorems (the present note imports the
+    singlet identification from \emph{Q3} and the atomicity from \emph{O21} rather than
+    re-deriving them internally).
 
   \section{The full residual rank: matched blocks and \texorpdfstring{$\Hres$}{[H res]}}
     \label{sec:residual}
@@ -245,16 +249,18 @@ the Admissible Pair Sector and the Full Residual Rank}
     \end{proposition}
 
     \begin{proof}
-      Axiom A3~\cite{Beau2026q1} and the non-factorisability lemma of the Foundation paper
-      forbid a decomposition of the open fibre stable under the admissible generators prior to
-      projection locking.
-      A non-uniform diagonal reduced state separates the residual directions into distinct weight
-      sectors.
-      Under $\Hres$, the weight levels are not admissibility-visible invariants, so this
-      separation is not a generator-stable decomposition and is admissible only if uniform.
+      If unequal weights on the residual directions were admissibility-visible, they would
+      define a decomposition of the open residual fibre that is stable under the admissible
+      generators, i.e.\ a premature splitting, which is forbidden by Axiom A3~\cite{Beau2026q1}
+      and the non-factorisability lemma of the Foundation paper prior to projection locking.
+      Under $\Hres$, no admissibility-visible invariant distinguishes the residual directions.
+      Therefore the admissible reduced state cannot assign different weights to them without
+      introducing extra structure not present in the admissibility data: the only
+      admissibility-invariant reduced state is proportional to the identity.
       Together with closure (pure joint state) and the equal residual dimensions of
-      \emph{O17}~\cite{Beau2026a21}, the reduced state is maximally mixed on the residual support,
-      giving $\Sent(n)=\log\rpair(n)$.
+      \emph{O17}~\cite{Beau2026a21}, the reduced state is
+      $\rho_c^{\mathrm{res}}(n)=\rpair(n)^{-1}\mathbf{1}_{\rpair(n)}$, giving
+      $\Sent(n)=\log\rpair(n)$.
     \end{proof}
 
     \begin{remark}[The dilation does not supply $\Hres$]
@@ -306,8 +312,10 @@ the Admissible Pair Sector and the Full Residual Rank}
     \[
       \Sadm = \log 2
     \]
-    for general canonical blocks, unconditionally (the rank-3 input of
-    \emph{O29}~\cite{Beau2026a33} carries the analytical backing of \emph{O30}~\cite{Beau2026a34}).
+    for general canonical blocks, unconditionally within the established
+    \emph{Q3}/\emph{O21}/\emph{O29}/\emph{O30} input chain (the rank-3 input of
+    \emph{O29}~\cite{Beau2026a33} itself carries the analytical backing of
+    \emph{O30}~\cite{Beau2026a34}).
 
     By contrast, the full residual-rank statement
     \[
@@ -327,7 +335,8 @@ the Admissible Pair Sector and the Full Residual Rank}
       &\;\Longrightarrow\;
       \Sent(n) = \log \rpair(n).
     \end{align*}
-    The first holds unconditionally for general canonical blocks.
+    The first holds for general canonical blocks, unconditionally relative to the cited
+    upstream theorems.
     The second holds unconditionally only for matched single-character blocks, and otherwise
     rests on $\Hres$.
 
