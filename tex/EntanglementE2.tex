@@ -1,0 +1,338 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{doi}
+
+\setlength{\emergencystretch}{2em}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Heis}{\mathrm{Heis}}
+\newcommand{\Cay}{\mathrm{Cay}}
+\newcommand{\ran}{\mathrm{ran}}
+\newcommand{\Sent}{S_{\mathrm{ent}}}
+\newcommand{\Sadm}{S_{\mathrm{ent}}^{\mathrm{adm}}}
+\newcommand{\rpair}{r_{\mathrm{pair}}}
+\newcommand{\Hres}{[\mathrm{H}_{\mathrm{res}}]}
+\newcommand{\ue}{\hat{u}}
+
+\title{Two Entanglement Entropies of the Conjugate Weil Pair:\\
+the Admissible Pair Sector and the Full Residual Rank}
+\author{J\'er\^ome Beau}
+\date{June 2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    The companion entanglement note and the orthogonality paper E1 identify two distinct
+    entanglement entropies of the conjugate Weil pair $\{c,q-c\}$, which must not be
+    conflated.
+    The first is the entropy of the minimal admissible pair sector: the rank-3 admissible
+    projection $\Pi_q$ is spectrally atomic, equal to $\mathrm{span}\{e_0,e_{\xi_c},e_{q-\xi_c}\}$;
+    removing the zero mode leaves the two-dimensional Born--Infeld parity pair
+    $\{e_{\xi_c},e_{q-\xi_c}\}$, identified with the spin-$\tfrac12$ representation.
+    The proto-state on this sector is the singlet, and its reduced state is maximally mixed,
+    so $\Sadm=\log 2$ for general canonical blocks, unconditionally.
+    This is the sector relevant to the singlet correlator and the Tsirelson bound.
+    The second is the full residual fibre-level rank $\rpair(n)=R_\infty-R(n)$ defined on the
+    full Gram--Schmidt basis (rank $q$ at saturation, not the rank-3 admissible projection).
+    E1 proves $\Sent(n)=\log\rpair(n)$ unconditionally for matched single-character blocks;
+    for independently sampled canonical blocks it remains conditional on the residual
+    admissibility indiscernibility hypothesis $\Hres$.
+    The metaplectic dilation $\phi_\omega$ is excluded as a bridge for $\Hres$ because it acts
+    between blocks, not within the residual support of one block.
+  \end{abstract}
+
+  \noindent\textbf{Keywords:}
+  conjugate Weil pairs;
+  spectral atomicity;
+  admissible projection;
+  spin-$\tfrac12$ singlet;
+  Tsirelson bound;
+  residual rank;
+  entanglement entropy;
+  epistemic stratification.
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+  \section{Introduction}
+    \label{sec:intro}
+
+    The companion entanglement note~\cite{Beau2026entnote} and the orthogonality paper
+    E1~\cite{Beau2026ent1} establish results about the entanglement of a closed conjugate Weil
+    pair $\{c,q-c\}$ in the spectral admissibility cascade.
+    A careful reading shows that two genuinely different entanglement entropies are in play,
+    attached to two different projections.
+    Conflating them produces an apparent tension between an unconditional $\log 2$ and a
+    depth-dependent $\log\rpair(n)$.
+
+    This note separates them.
+    The separation is not cosmetic: the two objects live on projections of different rank,
+    have different physical roles, and have different epistemic status.
+    One is the entropy of the minimal admissible sector, which is two-dimensional and carries
+    the singlet relevant to Bell--Tsirelson correlations; it is unconditional for general
+    blocks.
+    The other is the entropy of the full residual Gram--Schmidt rank, a finer pipeline-level
+    observable; it is unconditional only for matched blocks and otherwise rests on a bridge
+    hypothesis.
+
+  \section{Two distinct objects}
+    \label{sec:objects}
+
+    The O-series pipeline stores two distinct objects per conjugate pair, and
+    \emph{O21}~\cite{Beau2026q5ao2} (Remark 2.1) is explicit that they must not be identified.
+
+    \begin{itemize}
+      \item The full Gram--Schmidt basis is a unitary $q\times q$ matrix whose rows span all of
+      $\mathbb{C}^q$ at saturation.
+      Its cumulative admitted rank is $R(n)$, growing to $R_\infty=q$ at saturation, and
+      the residual fibre-level rank is
+      \[
+        \rpair(n) = R_\infty - R(n),
+      \]
+      which is non-increasing in $n$.
+      This is the object of the companion note~\cite{Beau2026entnote}.
+      It is \emph{not} the theoretical admissible projection.
+      \item The theoretical admissible projection $\Pi_q$ is the rank-3 projection onto the first
+      three Gram--Schmidt directions $\{\phi_0,\phi_1,\phi_2\}$, identified through the
+      $H_{\mathrm{eff}}$-projection coordinates of \emph{O21}~\cite{Beau2026q5ao2}, Remark 2.1.
+      All spectral statements about $\Pi_q$ concern this rank-3 object.
+    \end{itemize}
+
+    We therefore distinguish the admissible pair entropy $\Sadm$, defined on $\Pi_q$
+    (Section~\ref{sec:adm}), from the full residual-rank entropy $\Sent(n)$, defined on the
+    full Gram--Schmidt basis (Section~\ref{sec:residual}).
+
+  \section{The admissible pair sector: \texorpdfstring{$\Sadm=\log 2$}{S=log 2}}
+    \label{sec:adm}
+
+    The admissible sector is not an arbitrary residual subspace.
+    Its structure is fixed by spectral atomicity.
+
+    \begin{theorem}[Spectral atomicity, \emph{O21}~\cite{Beau2026q5ao2}, Proposition 4.1]
+      \label{thm:atomicity}
+      For each prime $q$ and each conjugate pair $(c,q-c)$, the three admissible directions
+      are pure Fourier modes,
+      \[
+        \phi_0 = e_0,
+        \qquad
+        \phi_1 = e_{\xi_c},
+        \qquad
+        \phi_2 = e_{q-\xi_c},
+      \]
+      with $e_\xi(k)=q^{-1/2}e^{2\pi i\xi k/q}$ and $\xi_c\in\{1,\dots,\lfloor q/2\rfloor\}$.
+      Equivalently $\ran(\Pi_q^{(c)}) = \mathrm{span}\{e_0,e_{\xi_c},e_{q-\xi_c}\}$.
+    \end{theorem}
+
+    This is an unconditional theorem of \emph{O21}: it replaces the earlier coercivity and
+    tightness hypotheses with proved statements, and is confirmed numerically to machine
+    precision for $q\in\{29,61,101,151\}$.
+    Its proof rests on three closed steps: the $k{=}3$ Weil fingerprints are pure Fourier
+    modes (the orthogonality result of E1~\cite{Beau2026ent1}); Gram--Schmidt preserves purity;
+    and the admissible rank is exactly three~\cite{Beau2026a33}, which with the Born--Infeld
+    parity involution forcing $e_{\xi_c}$ and $e_{q-\xi_c}$ to enter together fixes the triple.
+
+    The zero mode is removed by admissibility.
+
+    \begin{lemma}[Mean-zero, \emph{O21}~\cite{Beau2026q5ao2}, Lemma 3.1]
+      \label{lem:meanzero}
+      For every $f\in\ran(\Pi_q^{(c)})$, the Fourier coefficient $\hat{f}(0)=0$.
+    \end{lemma}
+
+    \begin{proof}
+      The Weil representation $\rho_c$ with $c\neq 0$ is irreducible with non-trivial central
+      character, so the constant function (the trivial representation) is orthogonal to
+      $\ran(\Pi_q^{(c)})$, giving $\langle\mathbf{1},f\rangle = \hat{f}(0)=0$.
+    \end{proof}
+
+    After removing $e_0$, the admissible sector is the two-dimensional Born--Infeld parity pair
+    \[
+      \mathcal{A}_c
+      := \mathrm{span}\{e_{\xi_c}, e_{q-\xi_c}\},
+      \qquad
+      q-\xi_c \equiv -\xi_c \pmod q,
+    \]
+    which we identify with the spin-$\tfrac12$ representation $V_{1/2}\cong\mathbb{C}^2$.
+    The two factors of the conjugate pair $\{c,q-c\}$ each carry a copy of $\mathcal{A}_c$,
+    and the bipartite proto-state lives on $\mathcal{A}_c\otimes\mathcal{A}_c$.
+
+    \begin{theorem}[Admissible pair entropy]
+      \label{thm:adm}
+      The proto-state on $\mathcal{A}_c\otimes\mathcal{A}_c$ is the singlet
+      \[
+        |\Omega_c\rangle
+        = \frac{1}{\sqrt{2}}
+        \bigl(|\xi_c\rangle\otimes|q-\xi_c\rangle
+        - |q-\xi_c\rangle\otimes|\xi_c\rangle\bigr).
+      \]
+      Its reduced state is $\rho^{\mathrm{adm}}_c = \tfrac12\mathbf{1}_2$, and hence
+      \[
+        \Sadm = \log 2.
+      \]
+    \end{theorem}
+
+    \begin{proof}
+      By Theorem~\ref{thm:atomicity} and Lemma~\ref{lem:meanzero}, the admissible sector of each
+      factor is $\mathcal{A}_c\cong V_{1/2}$.
+      By \emph{Q3}~\cite{Beau2026q3}, Theorem 4.1, Born--Infeld indiscernibility forces the
+      proto-state to be invariant under the diagonal action on $V_{1/2}\otimes V_{1/2}$, and by
+      Schur's lemma applied to the Clebsch--Gordan decomposition
+      $V_{1/2}\otimes V_{1/2}=V_0\oplus V_1$, the unique normalised invariant vector is the
+      singlet $|\Omega_c\rangle$.
+      The Schmidt decomposition of $|\Omega_c\rangle$ has two terms with equal coefficients
+      $1/\sqrt 2$, so $\rho^{\mathrm{adm}}_c = \tfrac12\mathbf{1}_2$ and
+      $\Sadm = -\mathrm{Tr}(\tfrac12\mathbf{1}_2\log\tfrac12\mathbf{1}_2) = \log 2$.
+    \end{proof}
+
+    Theorem~\ref{thm:adm} uses only the admissible parity pair $\{e_{\xi_c},e_{q-\xi_c}\}$,
+    fixed by spectral atomicity and parity for any block parameters.
+    It does not require a canonical identification of the full residual supports.
+    The admissible pair entropy is therefore $\log 2$ for general canonical blocks,
+    unconditionally.
+
+  \section{The full residual rank: matched blocks and \texorpdfstring{$\Hres$}{[H res]}}
+    \label{sec:residual}
+
+    The full residual fibre-level rank $\rpair(n)=R_\infty-R(n)$ is a different object,
+    defined on the full Gram--Schmidt basis rather than on $\Pi_q$.
+
+    On matched single-character blocks, E1~\cite{Beau2026ent1} (Theorem~7) proves that the
+    residual Schmidt spectrum is flat and that
+    \[
+      \Sent(n) = \log \rpair(n).
+    \]
+    The proof uses the sign-reflected Fourier supports $S_{q-c}^{\mathrm{res}}(n)
+  = -S_c^{\mathrm{res}}(n)$, which canonically identify the residual modes of the two factors
+    and yield a maximally entangled residual state.
+
+    For independently sampled canonical blocks, E1 also shows that this literal mode-by-mode
+    identification is not automatic.
+    \emph{O17}~\cite{Beau2026a21} supplies equality of the residual dimensions of the two
+    factors, but not a canonical pairing.
+    Universal admission orthogonality ($w_j=1$, E1 Theorem~4) ensures each factor has an
+    orthonormal residual basis, but orthonormality and equal dimension do not by themselves
+    fix the joint state or force a flat marginal.
+
+    \begin{definition}[Residual admissibility indiscernibility $\Hres$]
+      \label{def:hres}
+      At BFS depth $n$, the residual fingerprint directions of a conjugate Weil factor are
+      residually admissibility-indiscernible if no invariant carried by the admissible
+      generators distinguishes them, equivalently if assigning unequal weights would constitute
+      a premature admissible resolution of the open residual fibre.
+    \end{definition}
+
+    \begin{proposition}[Conditional flatness]
+      \label{prop:hres}
+      Assume the closure of the conjugate pair as a pure object, and assume $\Hres$.
+      Then the reduced state on the residual support is
+      $\rho_c^{\mathrm{res}}(n) = \rpair(n)^{-1}\mathbf{1}_{\rpair(n)}$, and
+      $\Sent(n)=\log\rpair(n)$ for general canonical blocks.
+    \end{proposition}
+
+    \begin{proof}
+      Axiom A3~\cite{Beau2026q1} and the non-factorisability lemma of the Foundation paper
+      forbid a decomposition of the open fibre stable under the admissible generators prior to
+      projection locking.
+      A non-uniform diagonal reduced state separates the residual directions into distinct weight
+      sectors.
+      Under $\Hres$, the weight levels are not admissibility-visible invariants, so this
+      separation is not a generator-stable decomposition and is admissible only if uniform.
+      Together with closure (pure joint state) and the equal residual dimensions of
+      \emph{O17}~\cite{Beau2026a21}, the reduced state is maximally mixed on the residual support,
+      giving $\Sent(n)=\log\rpair(n)$.
+    \end{proof}
+
+    \begin{remark}[The dilation does not supply $\Hres$]
+      \label{rem:dilation}
+      The metaplectic dilation $\phi_\omega(a,b,z)=(\omega a,\omega^{-1}b,z)$ of
+      \emph{O31}~\cite{Beau2026a34} forces $\sigma_c(n)=\sigma_{\omega c}(n)$, relating the block
+      of character $c$ to the block of character $\omega c$.
+      It acts between blocks, not within the residual support of a single block, and so does not
+      permute the residual modes of one factor.
+      It cannot make the residual modes admissibility-indiscernible, and is therefore not a
+      bridge for $\Hres$.
+      $\Hres$ has a status parallel to the conditional hypotheses [H-color] and [H-ext] elsewhere
+      in the programme.
+    \end{remark}
+
+  \section{Relation to the Bell--Tsirelson sector}
+    \label{sec:bell}
+
+    The entanglement that Bell--CHSH experiments measure is carried by the spin-$\tfrac12$
+    singlet.
+    By Theorem~\ref{thm:adm}, this is exactly the admissible pair sector, with
+    $\Sadm=\log 2$.
+    The singlet correlator $E(\hat a,\hat b)=-\hat a\cdot\hat b$ and the unconditional Tsirelson
+    bound $|S_{\mathrm{CHSH}}|\leq 2\sqrt 2$ are derived from the same admissible structure in
+    \emph{Q1}~\cite{Beau2026q1} (Theorem 2.14 and Corollary 2.16).
+    The admissible pair entropy is therefore the entanglement entropy of the state behind those
+    results.
+
+    The full residual-rank entropy $\Sent(n)=\log\rpair(n)$ is a finer, pipeline-level observable
+    that tracks the contraction of the full Gram--Schmidt span toward saturation.
+    It is not the quantity measured by a Bell experiment, and it should not be identified with
+    the singlet entropy.
+    The two coincide only in the degenerate case $\rpair(n)=2$.
+
+  \section{Status}
+    \label{sec:status}
+
+    E1~\cite{Beau2026ent1} proves universal admission orthogonality: each admitted $k{=}3$ Weil
+    fingerprint is a Fourier mode, and a newly admitted frequency is orthogonal to the previous
+    span.
+    \emph{O17}~\cite{Beau2026a21} proves equality of the conjugate pair ranks.
+
+    The admissible spin-$\tfrac12$ pair sector is closed by spectral atomicity
+    (\emph{O21}~\cite{Beau2026q5ao2}, Proposition 4.1), the mean-zero lemma, and the singlet
+    identification (\emph{Q3}~\cite{Beau2026q3}, Theorem 4.1).
+    The zero mode is excluded and the two surviving non-zero frequencies form the parity pair
+    $\{e_{\xi_c},e_{q-\xi_c}\}$.
+    Therefore
+    \[
+      \Sadm = \log 2
+    \]
+    for general canonical blocks, unconditionally (the rank-3 input of
+    \emph{O29}~\cite{Beau2026a33} carries the analytical backing of \emph{O30}~\cite{Beau2026a34}).
+
+    By contrast, the full residual-rank statement
+    \[
+      \Sent(n) = \log \rpair(n)
+    \]
+    is unconditional only for matched single-character blocks (E1 Theorem 7).
+    For independently sampled canonical blocks it remains conditional on $\Hres$, the residual
+    admissibility indiscernibility hypothesis (Definition~\ref{def:hres}).
+    The metaplectic dilation is excluded as a bridge for $\Hres$ (Remark~\ref{rem:dilation}).
+
+    The separation is therefore:
+    \begin{align*}
+      \text{Bell--Tsirelson sector}
+      &\;\Longrightarrow\;
+      \Sadm = \log 2,\\
+      \text{full residual-rank sector}
+      &\;\Longrightarrow\;
+      \Sent(n) = \log \rpair(n).
+    \end{align*}
+    The first holds unconditionally for general canonical blocks.
+    The second holds unconditionally only for matched single-character blocks, and otherwise
+    rests on $\Hres$.
+
+    \newpage
+    \bibliographystyle{plain}
+    \bibliography{cosmochrony-bibliography}
+
+\end{document}
