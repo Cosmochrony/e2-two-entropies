@@ -1,5 +1,5 @@
 This repository contains the source of the **Entanglement E2** Cosmochrony paper  
-[*Two Entanglement Entropies of the Conjugate Weil Pair: the Admissible Pair Sector and the Full Residual Rank*](out/EntanglementE2.pdf).
+*Two Entanglement Entropies of the Conjugate Weil Pair: the Admissible Pair Sector and the Full Residual Rank*.
 
 This paper separates two genuinely different entanglement entropies of the
 closed conjugate Weil pair $\{c, q-c\}$ that the companion entanglement note
