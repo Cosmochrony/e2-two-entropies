@@ -40,15 +40,22 @@ the Admissible Pair Sector and the Full Residual Rank}
     The companion entanglement note and the orthogonality paper E1 identify two distinct
     entanglement entropies of the conjugate Weil pair $\{c,q-c\}$, which must not be
     conflated, and which now carry different epistemic status.
-    The first is the entropy of the minimal admissible pair sector: the rank-3 admissible
-    projection $\Pi_q$ is spectrally atomic, equal to $\mathrm{span}\{e_0,e_{\xi_c},e_{q-\xi_c}\}$;
-    removing the zero mode leaves the two-dimensional Born--Infeld parity pair
+    The first is the entropy of the minimal admissible pair sector.
+    The mean-zero lemma is unconditional: the zero mode is always removed by admissibility.
+    Spectral atomicity itself -- that the admissible projection $\Pi_q$ equals
+    $\mathrm{span}\{e_0,e_{\xi_c},e_{q-\xi_c}\}$ -- is confirmed numerically to machine precision
+    for the primes tested, but its general analytical proof rests on \emph{O23}'s
+    admissible-rank-exactly-three result, which \emph{O23} itself states as conditional on the
+    absence of additional effective symmetries beyond Born--Infeld parity, within the scope of
+    \emph{O18} -- an explicit hypothesis here labelled (H-rank).
+    Under (H-rank), removing the zero mode leaves the two-dimensional Born--Infeld parity pair
     $\{e_{\xi_c},e_{q-\xi_c}\}$, identified with the spin-$\tfrac12$ representation.
-    Under the explicit, undemonstrated hypothesis (H-inv) that the proto-state on this sector is
-    invariant under the diagonal $2I$-action -- a hypothesis stated and left open, not derived,
-    by \emph{Q3} -- the proto-state is the singlet, its reduced state is maximally mixed, and
+    Under the further, independent hypothesis (H-inv) that the proto-state on this sector is
+    invariant under the diagonal $2I$-action -- stated and left open, not derived, by \emph{Q3}
+    -- the proto-state is the singlet, its reduced state is maximally mixed, and
     $S_{\mathrm{ent}}^{\mathrm{adm}}=\log 2$ for general canonical blocks.
-    This admissible pair entropy is therefore conditional on (H-inv), not unconditional.
+    This admissible pair entropy is therefore conditional on both (H-rank) and (H-inv), not
+    unconditional.
     The second object is the full residual fibre-level rank $r_{\mathrm{pair}}(n)=R_\infty-R(n)$
     defined on the full Gram--Schmidt basis (rank $q$ at saturation, not the rank-3 admissible
     projection).
@@ -92,8 +99,10 @@ the Admissible Pair Sector and the Full Residual Rank}
     have different physical roles, and have different epistemic status.
     One is the entropy of the minimal admissible sector, which is two-dimensional and carries
     the singlet relevant to diagonal-invariant bipartite structure; it holds for general blocks
-    but only conditionally, under the explicit hypothesis (H-inv) that \emph{Q3} states and
-    leaves open.
+    but only conditionally, under two independent hypotheses: (H-rank), that no additional
+    effective symmetries beyond Born--Infeld parity act on the admissible fibre, which
+    \emph{O23} itself states as a condition on its own rank-3 result; and (H-inv), the
+    diagonal-invariance hypothesis that \emph{Q3} states and leaves open.
     The other is the entropy of the full residual Gram--Schmidt rank, a finer pipeline-level
     observable; it is unconditional only for matched blocks and otherwise rests on bridge
     hypotheses of its own.
@@ -125,15 +134,30 @@ the Admissible Pair Sector and the Full Residual Rank}
     (Section~\ref{sec:adm}), from the full residual-rank entropy $\Sent(n)$, defined on the
     full Gram--Schmidt basis (Section~\ref{sec:residual}).
 
-  \section{The admissible pair sector: \texorpdfstring{$\Sadm=\log 2$}{S=log 2} under (H-inv)}
+  \section{The admissible pair sector: \texorpdfstring{$\Sadm=\log 2$}{S=log 2} under (H-rank) and (H-inv)}
     \label{sec:adm}
 
     The admissible sector is not an arbitrary residual subspace.
-    Its structure is fixed by spectral atomicity.
+    Its structure is fixed by spectral atomicity, whose general analytical proof rests on a
+    further hypothesis inherited from \emph{O23}.
 
-    \begin{theorem}[Spectral atomicity, \emph{Q5a-O2}~\cite{Beau2026q5ao2}, Proposition 4.1]
+    \begin{quote}
+      \textbf{(H-rank)} \emph{(O23~\cite{Beau2026a27}, hypothesis, not a theorem of that paper.)}
+      No additional effective symmetries act on the admissible fibre beyond Born--Infeld
+      parity, within the explicit scope of \emph{O18}~\cite{Beau2026a22}.
+    \end{quote}
+
+    \emph{O23} proves that the admissible rank is exactly three \emph{subject to (H-rank)}: its
+    own abstract states the result as ``conditional on the absence of additional effective
+    symmetries beyond Born--Infeld parity, in accordance with the explicit scope of O18.''
+    \emph{Q5a-O2}'s proof of spectral atomicity (Proposition 4.1 below) uses this rank-3 result
+    as an input without repeating O23's qualification; the present note carries it forward
+    explicitly rather than silently.
+
+    \begin{theorem}[Spectral atomicity under (H-rank), \emph{Q5a-O2}~\cite{Beau2026q5ao2}, Proposition 4.1]
       \label{thm:atomicity}
-      For each prime $q$ and each conjugate pair $(c,q-c)$, the three admissible directions
+      Assume (H-rank).
+      Then for each prime $q$ and each conjugate pair $(c,q-c)$, the three admissible directions
       are pure Fourier modes,
       \[
         \phi_0 = e_0,
@@ -146,15 +170,21 @@ the Admissible Pair Sector and the Full Residual Rank}
       Equivalently $\ran(\Pi_q^{(c)}) = \mathrm{span}\{e_0,e_{\xi_c},e_{q-\xi_c}\}$.
     \end{theorem}
 
-    This is an unconditional theorem of \emph{Q5a-O2}: it replaces the earlier coercivity and
-    tightness hypotheses with proved statements, and is confirmed numerically to machine
-    precision for $q\in\{29,61,101,151\}$.
-    Its proof rests on three closed steps: the $k{=}3$ Weil fingerprints are pure Fourier
-    modes (the orthogonality result of E1~\cite{Beau2026ent1}); Gram--Schmidt preserves purity;
-    and the admissible rank is exactly three~\cite{Beau2026a27}, which with the Born--Infeld
-    parity involution forcing $e_{\xi_c}$ and $e_{q-\xi_c}$ to enter together fixes the triple.
+    The general analytical proof of Theorem~\ref{thm:atomicity}, valid for every prime $q$,
+    therefore rests on (H-rank), and is otherwise closed: it replaces the earlier coercivity
+    and tightness hypotheses of \emph{Q5a-O2} with proved statements.
+    This must be kept distinct from the numerical evidence: the statement is confirmed
+    numerically to machine precision for $q\in\{29,61,101,151\}$ by direct computation of the
+    admissible projection at those primes, independently of (H-rank) -- a numerical check does
+    not invoke O23's general argument, and is not itself evidence for or against (H-rank) at
+    other primes.
+    The proof otherwise rests on three closed steps: the $k{=}3$ Weil fingerprints are pure
+    Fourier modes (the orthogonality result of E1~\cite{Beau2026ent1}); Gram--Schmidt preserves
+    purity; and, under (H-rank), the admissible rank is exactly three~\cite{Beau2026a27}, which
+    with the Born--Infeld parity involution forcing $e_{\xi_c}$ and $e_{q-\xi_c}$ to enter
+    together fixes the triple.
 
-    The zero mode is removed by admissibility.
+    The zero mode is removed by admissibility, unconditionally.
 
     \begin{lemma}[Mean-zero, \emph{Q5a-O2}~\cite{Beau2026q5ao2}, Lemma 3.1]
       \label{lem:meanzero}
@@ -167,7 +197,11 @@ the Admissible Pair Sector and the Full Residual Rank}
       $\ran(\Pi_q^{(c)})$, giving $\langle\mathbf{1},f\rangle = \hat{f}(0)=0$.
     \end{proof}
 
-    After removing $e_0$, the admissible sector is the two-dimensional Born--Infeld parity pair
+    This lemma does not depend on (H-rank): it holds for any $f$ in the admissible range,
+    whatever that range turns out to be, and rests only on irreducibility of $\rho_c$.
+
+    Under (H-rank), after removing $e_0$, the admissible sector is the two-dimensional
+    Born--Infeld parity pair
     \[
       \mathcal{A}_c
       := \mathrm{span}\{e_{\xi_c}, e_{q-\xi_c}\},
@@ -192,9 +226,9 @@ the Admissible Pair Sector and the Full Residual Rank}
     The present note imports (H-inv) as a hypothesis on the same footing as \emph{Q3}, rather
     than deriving it.
 
-    \begin{theorem}[Admissible pair entropy under (H-inv)]
+    \begin{theorem}[Admissible pair entropy under (H-rank) and (H-inv)]
       \label{thm:adm}
-      Assume (H-inv).
+      Assume (H-rank) and (H-inv).
       Then the proto-state on $\mathcal{A}_c\otimes\mathcal{A}_c$ is the singlet
       \[
         |\Omega_c\rangle
@@ -209,8 +243,8 @@ the Admissible Pair Sector and the Full Residual Rank}
     \end{theorem}
 
     \begin{proof}
-      By Theorem~\ref{thm:atomicity} and Lemma~\ref{lem:meanzero}, the admissible sector of each
-      factor is $\mathcal{A}_c\cong V_{1/2}$.
+      By Theorem~\ref{thm:atomicity} (under (H-rank)) and Lemma~\ref{lem:meanzero}
+      (unconditional), the admissible sector of each factor is $\mathcal{A}_c\cong V_{1/2}$.
       By \emph{Q3}~\cite{Beau2026q3}, Theorem 3.2, applied to $j=\tfrac12$: the invariants of the
       diagonal $2I$-action on $V_{1/2}\otimes V_{1/2}$ form a one-dimensional space (Schur's
       lemma, via $V_{1/2}\otimes V_{1/2}=V_0\oplus V_1$ and irreducibility/self-duality of
@@ -223,14 +257,17 @@ the Admissible Pair Sector and the Full Residual Rank}
     \end{proof}
 
     Theorem~\ref{thm:adm} uses only the admissible parity pair $\{e_{\xi_c},e_{q-\xi_c}\}$,
-    fixed by spectral atomicity and parity for any block parameters, so it does not require a
-    canonical identification of the full residual supports; that part of the argument is
-    unconditional.
-    What is conditional is (H-inv) itself: the admissible pair entropy is $\log 2$ for general
-    canonical blocks \emph{given} (H-inv), not unconditionally.
-    The present note imports both the atomicity of \emph{Q5a-O2} and the singlet identification
-    of \emph{Q3} under (H-inv), rather than re-deriving either internally, and inherits the
-    conditional status Q3 itself assigns to (H-inv).
+    fixed under (H-rank) by spectral atomicity and parity for any block parameters, so it does
+    not require a canonical identification of the full residual supports.
+    But it does depend on two independent hypotheses, neither derived here or in the papers
+    that state them: (H-rank), which fixes the admissible sector to be two-dimensional at all
+    (\emph{O23}'s own condition on its rank-3 result), and (H-inv), which fixes the proto-state
+    on that sector to be the singlet (\emph{Q3}'s own condition on its uniqueness theorem).
+    The admissible pair entropy is $\log 2$ for general canonical blocks \emph{given both},
+    not unconditionally.
+    The present note imports the atomicity of \emph{Q5a-O2} under (H-rank) and the singlet
+    identification of \emph{Q3} under (H-inv), rather than re-deriving either internally, and
+    inherits the conditional status each source paper assigns to its own hypothesis.
 
   \section{The full residual rank: matched blocks and \texorpdfstring{$\Hres$}{[H res]}}
     \label{sec:residual}
@@ -315,19 +352,22 @@ the Admissible Pair Sector and the Full Residual Rank}
     model, for an arbitrary pair of blocks; extending this to the conjugate-pair setting of the
     real admissibility pipeline is open (Section~\ref{sec:residual}).
 
-    The admissible spin-$\tfrac12$ pair sector's structure is closed unconditionally by spectral
-    atomicity (\emph{Q5a-O2}~\cite{Beau2026q5ao2}, Proposition 4.1) and the mean-zero lemma: the
-    zero mode is excluded and the two surviving non-zero frequencies form the parity pair
-    $\{e_{\xi_c},e_{q-\xi_c}\}$, identified with $V_{1/2}$.
-    What is \emph{not} unconditional is the proto-state on this sector: Theorem~\ref{thm:adm}
-    identifies it as the singlet, and hence
+    The mean-zero lemma is unconditional: the zero mode is always excluded by admissibility.
+    Spectral atomicity itself -- that the two surviving non-zero frequencies form the parity pair
+    $\{e_{\xi_c},e_{q-\xi_c}\}$, identified with $V_{1/2}$ -- is confirmed numerically to machine
+    precision at the primes tested, but its general analytical proof (\emph{Q5a-O2}
+    Proposition~4.1) rests on \emph{O23}'s rank-3 result, which \emph{O23} itself states as
+    conditional on (H-rank): the absence of additional effective symmetries beyond Born--Infeld
+    parity, within the scope of \emph{O18}.
+    What is \emph{not} unconditional, on top of (H-rank), is the proto-state on this sector:
+    Theorem~\ref{thm:adm} identifies it as the singlet, and hence
     \[
       \Sadm = \log 2,
     \]
-    only under the explicit hypothesis (H-inv) that \emph{Q3}~\cite{Beau2026q3} states and leaves
-    open, not under any unconditional forcing.
-    (H-inv) is not derived from Born--Infeld indiscernibility, from admissibility, or from any
-    other principle in the present corpus.
+    only under the further, independent hypothesis (H-inv) that \emph{Q3}~\cite{Beau2026q3}
+    states and leaves open, not under any unconditional forcing.
+    Neither (H-rank) nor (H-inv) is derived from Born--Infeld indiscernibility, from
+    admissibility, or from any other principle in the present corpus.
 
     By contrast, the full residual-rank statement
     \[
@@ -342,16 +382,18 @@ the Admissible Pair Sector and the Full Residual Rank}
 
     The separation is therefore:
     \begin{align*}
-      \text{admissible pair sector, under (H-inv)}
+      \text{admissible pair sector, under (H-rank), (H-inv)}
       &\;\Longrightarrow\;
       \Sadm = \log 2,\\
       \text{residual-rank sector, matched blocks}
       &\;\Longrightarrow\;
       \Sent(n) = \log \rpair(n).
     \end{align*}
-    The first holds for general canonical blocks, but only conditionally on (H-inv).
-    The second holds unconditionally for matched single-character blocks, and conditionally
-    otherwise, on $\Hres$ together with the O17 transfer gap.
+    The first holds for general canonical blocks, but only conditionally on (H-rank) and
+    (H-inv) jointly.
+    The second holds unconditionally for matched single-character blocks -- the one
+    unconditional result of this note -- and conditionally otherwise, on $\Hres$ together with
+    the O17 transfer gap.
 
     \newpage
     \bibliographystyle{plain}

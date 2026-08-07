@@ -19,23 +19,29 @@ roles, and have different epistemic status.
 
 | Object | Projection | Rank | Status |
 |---|---|---|---|
-| Admissible pair sector $\mathcal{A}_c$ | $\Pi_q$ (rank-3 admissible) | 2 (after removing $e_0$) | Structure unconditional; proto-state conditional on (H-inv) |
+| Admissible pair sector $\mathcal{A}_c$ | $\Pi_q$ (rank-3 admissible) | 2 (after removing $e_0$) | Mean-zero unconditional; atomicity conditional on (H-rank); proto-state conditional on (H-rank) and (H-inv) |
 | Residual fibre-level support | Full Gram--Schmidt basis | $r_{\mathrm{pair}}(n) = R_\infty - R(n)$, with $R_\infty = q$ | Unconditional for matched blocks; conditional otherwise |
 
-The admissible sector's structure is fixed by **spectral atomicity** (Q5a-O2
-Proposition 4.1): the rank-3 admissible projection is
-$\mathrm{ran}(\Pi_q^{(c)}) = \mathrm{span}\{e_0, e_{\xi_c}, e_{q-\xi_c}\}$;
-after the mean-zero lemma removes $e_0$, the Born--Infeld parity pair
-$\{e_{\xi_c}, e_{q-\xi_c}\}$ is the two-dimensional spin-$\tfrac12$
-representation $V_{1/2}$. This part is unconditional.
+The zero mode is always removed by admissibility (mean-zero lemma,
+unconditional). **Spectral atomicity** itself (Q5a-O2 Proposition 4.1) --
+that the rank-3 admissible projection is
+$\mathrm{ran}(\Pi_q^{(c)}) = \mathrm{span}\{e_0, e_{\xi_c}, e_{q-\xi_c}\}$ --
+is confirmed numerically to machine precision at the primes tested, but its
+general analytical proof rests on O23's admissible-rank-exactly-three result,
+which O23's own abstract states as conditional on the absence of additional
+effective symmetries beyond Born--Infeld parity, within the scope of O18: an
+explicit hypothesis here labelled **(H-rank)**. Under (H-rank), the
+Born--Infeld parity pair $\{e_{\xi_c}, e_{q-\xi_c}\}$ is the two-dimensional
+spin-$\tfrac12$ representation $V_{1/2}$.
 
 ## Core Results
 
-### Theorem (Admissible pair entropy under (H-inv))
+### Theorem (Admissible pair entropy under (H-rank) and (H-inv))
 
-Under the explicit hypothesis **(H-inv)** -- that the proto-state on
-$\mathcal{A}_c \otimes \mathcal{A}_c$ is invariant under the diagonal $2I$-action --
-the proto-state is the spin-$\tfrac12$ singlet
+Under **(H-rank)** and the further, independent explicit hypothesis
+**(H-inv)** -- that the proto-state on $\mathcal{A}_c \otimes \mathcal{A}_c$
+is invariant under the diagonal $2I$-action -- the proto-state is the
+spin-$\tfrac12$ singlet
 $$
 |\Omega_c\rangle = \frac{1}{\sqrt{2}}\bigl(|\xi_c\rangle \otimes |q-\xi_c\rangle - |q-\xi_c\rangle \otimes |\xi_c\rangle\bigr),
 $$
@@ -43,15 +49,16 @@ its reduced state is $\rho^{\mathrm{adm}}_c = \tfrac12 \mathbf{1}_2$, and
 $$
 S_{\mathrm{ent}}^{\mathrm{adm}} = \log 2.
 $$
-The proof uses spectral atomicity (Q5a-O2), the mean-zero lemma, and Q3's
-Theorem 3.2 (Schur's lemma via Clebsch--Gordan $V_{1/2} \otimes V_{1/2} = V_0
-\oplus V_1$, applied under (H-inv)). (H-inv) is stated by Q3 as an explicit,
-undemonstrated hypothesis, not derived there from Born--Infeld
-indiscernibility, from admissibility, or from any other principle; whether a
-physically admissible proto-state must satisfy (H-inv) is a separate, open
-question. The atomicity of the sector itself, and the elimination of the zero
-mode, are unconditional; the singlet identification, and hence $\log 2$, holds
-for **general canonical blocks** only **given (H-inv)**.
+The proof uses spectral atomicity under (H-rank) (Q5a-O2), the unconditional
+mean-zero lemma, and Q3's Theorem 3.2 (Schur's lemma via Clebsch--Gordan
+$V_{1/2} \otimes V_{1/2} = V_0 \oplus V_1$, applied under (H-inv)). Neither
+(H-rank) nor (H-inv) is derived from Born--Infeld indiscernibility, from
+admissibility, or from any other principle in the present corpus; each is
+stated as an explicit, undemonstrated hypothesis by the paper that introduces
+it (O23 and Q3 respectively), and E2 imports both rather than deriving
+either. The mean-zero lemma is unconditional regardless; the singlet
+identification, and hence $\log 2$, holds for **general canonical blocks**
+only **given both (H-rank) and (H-inv)**.
 
 ### Residual-rank entropy (status)
 
@@ -71,8 +78,9 @@ Constituent of the **entanglement sub-programme**
 ([ENT-Note](https://doi.org/10.5281/zenodo.20498835)). The result chain on
 which the present note rests is:
 
-- **Q5a-O2** ([Beau2026q5ao2](https://doi.org/10.5281/zenodo.19915951)): spectral atomicity (Proposition 4.1) and the mean-zero lemma (Lemma 3.1);
-- **O23** ([Beau2026a27](https://doi.org/10.5281/zenodo.19375136)): admissible rank exactly three;
+- **Q5a-O2** ([Beau2026q5ao2](https://doi.org/10.5281/zenodo.19915951)): spectral atomicity (Proposition 4.1, conditional on (H-rank) via O23) and the mean-zero lemma (Lemma 3.1, unconditional);
+- **O23** ([Beau2026a27](https://doi.org/10.5281/zenodo.19375136)): admissible rank exactly three, conditional on (H-rank) by O23's own statement;
+- **O18** ([Beau2026a22](https://doi.org/10.5281/zenodo.19321413)): defines the scope within which (H-rank) is stated;
 - **O17** ([Beau2026a21](https://doi.org/10.5281/zenodo.19299611)): equality of residual dimensions, within its own scalar toy model -- not yet shown to transfer to the real pipeline;
 - **O31** ([Beau2026a35](https://doi.org/10.5281/zenodo.20030491)): the metaplectic dilation, excluded as a bridge for $[\mathrm{H}_{\mathrm{res}}]$;
 - **E1** ([Beau2026ent1](https://doi.org/10.5281/zenodo.20499309)): universal admission orthogonality, matched-block flat Schmidt spectrum, and the open Schmidt-pairing question for general blocks;
