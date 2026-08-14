@@ -19,26 +19,29 @@ roles, and have different epistemic status.
 
 | Object | Projection | Rank | Status |
 |---|---|---|---|
-| Admissible pair sector $\mathcal{A}_c$ | $\Pi_q$ (rank-3 admissible) | 2 (after removing $e_0$) | Mean-zero unconditional; atomicity conditional on (H-rank); proto-state conditional on (H-rank) and (H-inv) |
+| Admissible pair sector $\mathcal{A}_c$ | Hypothesised atomic triple (rank 3) | 2 (parity-pair component) | Carrier conditional on (H-carrier); proto-state conditional on (H-carrier) and (H-inv) |
 | Residual fibre-level support | Full Gram--Schmidt basis | $r_{\mathrm{pair}}(n) = R_\infty - R(n)$, with $R_\infty = q$ | Unconditional for matched blocks; conditional otherwise |
 
-The zero mode is always removed by admissibility (mean-zero lemma,
-unconditional). **Spectral atomicity** itself (Q5a-O2 Proposition 4.1) --
-that the rank-3 admissible projection is
-$\mathrm{ran}(\Pi_q^{(c)}) = \mathrm{span}\{e_0, e_{\xi_c}, e_{q-\xi_c}\}$ --
-is confirmed numerically to machine precision at the primes tested, but its
-general analytical proof rests on O23's admissible-rank-exactly-three result,
-which O23's own abstract states as conditional on the absence of additional
-effective symmetries beyond Born--Infeld parity, within the scope of O18: an
-explicit hypothesis here labelled **(H-rank)**. Under (H-rank), the
-Born--Infeld parity pair $\{e_{\xi_c}, e_{q-\xi_c}\}$ is the two-dimensional
-spin-$\tfrac12$ representation $V_{1/2}$.
+The admissible pair carrier is fixed by an explicit hypothesis, **(H-carrier)**:
+the admissible sector of each factor is the atomic Fourier triple
+$\mathrm{ran}(\Pi_q^{(c)}) = \mathrm{span}\{e_0, e_{\xi_c}, e_{q-\xi_c}\}$.
+It is structurally motivated -- every selected Gram--Schmidt direction of the
+pre-saturation pipeline is a pure Fourier mode (Q5a-O2, Propositions 3.1--3.2;
+equivalently E1's orthogonality result), and conjugate frequencies enter as
+parity partners -- but not derived: the rank-three threshold $\Sigma_c(n_3)=3$
+is a supplied selection rule (O23), the pipeline's three-coordinate reduction
+is a truncation from which no rank can be read (Q5a-O2, Proposition 4.1), no
+mean-zero theorem removes the zero mode (the passage to the pair sector is part
+of the sector definition), and the archived support-size diagnostics are not
+reproducible and include a delocalised case ($q=61$, pair $c=2$).
+Under (H-carrier), the Born--Infeld parity pair $\{e_{\xi_c}, e_{q-\xi_c}\}$ is
+the two-dimensional spin-$\tfrac12$ representation $V_{1/2}$.
 
 ## Core Results
 
-### Theorem (Admissible pair entropy under (H-rank) and (H-inv))
+### Theorem (Admissible pair entropy under (H-carrier) and (H-inv))
 
-Under **(H-rank)** and the further, independent explicit hypothesis
+Under **(H-carrier)** and the further, independent explicit hypothesis
 **(H-inv)** -- that the proto-state on $\mathcal{A}_c \otimes \mathcal{A}_c$
 is invariant under the diagonal $2I$-action -- the proto-state is the
 spin-$\tfrac12$ singlet
@@ -49,16 +52,14 @@ its reduced state is $\rho^{\mathrm{adm}}_c = \tfrac12 \mathbf{1}_2$, and
 $$
 S_{\mathrm{ent}}^{\mathrm{adm}} = \log 2.
 $$
-The proof uses spectral atomicity under (H-rank) (Q5a-O2), the unconditional
-mean-zero lemma, and Q3's Theorem 3.2 (Schur's lemma via Clebsch--Gordan
-$V_{1/2} \otimes V_{1/2} = V_0 \oplus V_1$, applied under (H-inv)). Neither
-(H-rank) nor (H-inv) is derived from Born--Infeld indiscernibility, from
-admissibility, or from any other principle in the present corpus; each is
-stated as an explicit, undemonstrated hypothesis by the paper that introduces
-it (O23 and Q3 respectively), and E2 imports both rather than deriving
-either. The mean-zero lemma is unconditional regardless; the singlet
-identification, and hence $\log 2$, holds for **general canonical blocks**
-only **given both (H-rank) and (H-inv)**.
+The proof uses the (H-carrier) pair sector and Q3's Theorem 3.2 (Schur's
+lemma via Clebsch--Gordan $V_{1/2} \otimes V_{1/2} = V_0 \oplus V_1$, applied
+under (H-inv)). Neither (H-carrier) nor (H-inv) is derived from Born--Infeld
+structure, from admissibility, or from any other principle in the present
+corpus; (H-carrier) is stated by E2 itself, (H-inv) by Q3, and E2 imports the
+latter rather than deriving it. The singlet identification, and hence
+$\log 2$, holds for **general canonical blocks** only **given both
+(H-carrier) and (H-inv)**.
 
 ### Residual-rank entropy (status)
 
@@ -78,9 +79,9 @@ Constituent of the **entanglement sub-programme**
 ([ENT-Note](https://doi.org/10.5281/zenodo.20498835)). The result chain on
 which the present note rests is:
 
-- **Q5a-O2** ([Beau2026q5ao2](https://doi.org/10.5281/zenodo.19915951)): spectral atomicity (Proposition 4.1, conditional on (H-rank) via O23) and the mean-zero lemma (Lemma 3.1, unconditional);
-- **O23** ([Beau2026a27](https://doi.org/10.5281/zenodo.19375136)): admissible rank exactly three, conditional on (H-rank) by O23's own statement;
-- **O18** ([Beau2026a22](https://doi.org/10.5281/zenodo.19321413)): defines the scope within which (H-rank) is stated;
+- **Q5a-O2** ([Beau2026q5ao2](https://doi.org/10.5281/zenodo.19915951)): pure Fourier modes of the pre-saturation pipeline (Propositions 3.1--3.2) and the truncation status of the three-coordinate reduction (Proposition 4.1), which motivate (H-carrier) without deriving it;
+- **O23** ([Beau2026a27](https://doi.org/10.5281/zenodo.19375136)): the adjoint-dimension theorem for a supplied spinor carrier; the threshold $\Sigma_c(n_3)=3$ is a supplied selection rule, both bridges open;
+- **O18** ([Beau2026a22](https://doi.org/10.5281/zenodo.19321413)): equivariant Born--Infeld parity and the open fibre-identification problem within which any carrier selection would have to be posed;
 - **O17** ([Beau2026a21](https://doi.org/10.5281/zenodo.19299611)): equality of residual dimensions, within its own scalar toy model -- not yet shown to transfer to the real pipeline;
 - **O31** ([Beau2026a35](https://doi.org/10.5281/zenodo.20030491)): the metaplectic dilation, excluded as a bridge for $[\mathrm{H}_{\mathrm{res}}]$;
 - **E1** ([Beau2026ent1](https://doi.org/10.5281/zenodo.20499309)): universal admission orthogonality, matched-block flat Schmidt spectrum, and the open Schmidt-pairing question for general blocks;
