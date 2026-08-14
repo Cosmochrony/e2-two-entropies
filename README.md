@@ -22,9 +22,12 @@ roles, and have different epistemic status.
 | Admissible pair sector $\mathcal{A}_c$ | Hypothesised atomic triple (rank 3) | 2 (parity-pair component) | Carrier conditional on (H-carrier); proto-state conditional on (H-carrier) and (H-inv) |
 | Residual fibre-level support | Full Gram--Schmidt basis | $r_{\mathrm{pair}}(n) = R_\infty - R(n)$, with $R_\infty = q$ | Unconditional for matched blocks; conditional otherwise |
 
-The admissible pair carrier is fixed by an explicit hypothesis, **(H-carrier)**:
-the admissible sector of each factor is the atomic Fourier triple
-$\mathrm{ran}(\Pi_q^{(c)}) = \mathrm{span}\{e_0, e_{\xi_c}, e_{q-\xi_c}\}$.
+The admissible pair carrier is fixed by an explicit two-clause hypothesis, **(H-carrier)**:
+(i) the admissible sector of each factor is the atomic Fourier triple
+$\mathrm{ran}(\Pi_q^{(c)}) = \mathrm{span}\{e_0, e_{\xi_c}, e_{q-\xi_c}\}$; (ii) its parity-pair
+component carries the spin-$\tfrac12$ module $V_{1/2}$ of the binary group acting in (H-inv)
+(the natural swap on the pair plane has eigenvalues $\pm 1$ while $-1 \in 2I$ must act as
+$-\mathbf{1}$, so the module identification is a genuine assumption).
 It is structurally motivated -- every selected Gram--Schmidt direction of the
 pre-saturation pipeline is a pure Fourier mode (Q5a-O2, Propositions 3.1--3.2;
 equivalently E1's orthogonality result), and conjugate frequencies enter as
@@ -34,7 +37,7 @@ is a truncation from which no rank can be read (Q5a-O2, Proposition 4.1), no
 mean-zero theorem removes the zero mode (the passage to the pair sector is part
 of the sector definition), and the archived support-size diagnostics are not
 reproducible and include a delocalised case ($q=61$, pair $c=2$).
-Under (H-carrier), the Born--Infeld parity pair $\{e_{\xi_c}, e_{q-\xi_c}\}$ is
+Under (H-carrier), the conjugate-frequency pair $\{e_{\xi_c}, e_{q-\xi_c}\}$ carries
 the two-dimensional spin-$\tfrac12$ representation $V_{1/2}$.
 
 ## Core Results
