@@ -51,8 +51,9 @@ the Admissible Pair Sector and the Full Residual Rank}
     pipeline's three-coordinate reduction is a truncation fixed in advance, and no mean-zero
     theorem removes the zero mode -- the passage to the pair sector is part of the sector
     definition.
-    Under (H-carrier), the pair sector is the two-dimensional Born--Infeld parity pair
-    $\{e_{\xi_c},e_{q-\xi_c}\}$, identified with the spin-$\tfrac12$ representation.
+    Under (H-carrier) --- which includes, as an explicit clause, the identification of the
+    pair sector $\{e_{\xi_c},e_{q-\xi_c}\}$ with the spin-$\tfrac12$ module $V_{1/2}$ of the
+    binary group acting in (H-inv) --- the pair sector carries the singlet analysis below.
     Under the further, independent hypothesis (H-inv) that the proto-state on this sector is
     invariant under the diagonal $2I$-action -- stated and left open, not derived, by \emph{Q3}
     -- the proto-state is the singlet, its reduced state is maximally mixed, and
@@ -150,12 +151,16 @@ the Admissible Pair Sector and the Full Residual Rank}
     \begin{quote}
       \textbf{(H-carrier)} \emph{(hypothesis of the present note; derived nowhere in the
       corpus.)}
-      For each prime $q$ and each conjugate pair $(c, q-c)$, the admissible sector of each
-      factor is the atomic Fourier triple
+      For each prime $q$ and each conjugate pair $(c, q-c)$: (i) the admissible sector of
+      each factor is the atomic Fourier triple
       \[
         \ran(\Pi_q^{(c)}) = \mathrm{span}\{e_0,\, e_{\xi_c},\, e_{q-\xi_c}\},
       \]
-      with $e_\xi(k)=q^{-1/2}e^{2\pi i\xi k/q}$ and $\xi_c\in\{1,\dots,\lfloor q/2\rfloor\}$.
+      with $e_\xi(k)=q^{-1/2}e^{2\pi i\xi k/q}$ and $\xi_c\in\{1,\dots,\lfloor q/2\rfloor\}$;
+      and (ii) the pair-sector plane $\mathrm{span}\{e_{\xi_c}, e_{q-\xi_c}\}$ carries the
+      spin-$\tfrac12$ representation $V_{1/2}$ of the binary group whose diagonal action
+      enters (H-inv), i.e.\ the module identification $\mathcal{A}_c \cong V_{1/2}$ is part
+      of the hypothesis.
     \end{quote}
 
     Three facts delimit the status of (H-carrier).
@@ -181,14 +186,22 @@ the Admissible Pair Sector and the Full Residual Rank}
     ($q=61$, pair $c=2$).
 
     Under (H-carrier), the pair sector of each factor is the two-dimensional
-    Born--Infeld parity pair
+    conjugate-frequency pair (named the Born--Infeld parity pair after the candidate parity
+    structure of the programme; the name imports no fibre claim)
     \[
       \mathcal{A}_c
       := \mathrm{span}\{e_{\xi_c}, e_{q-\xi_c}\},
       \qquad
       q-\xi_c \equiv -\xi_c \pmod q,
     \]
-    which we identify with the spin-$\tfrac12$ representation $V_{1/2}\cong\mathbb{C}^2$.
+    which carries the spin-$\tfrac12$ representation $V_{1/2}\cong\mathbb{C}^2$ by clause
+    (ii) of (H-carrier).
+    The module identification is a genuine further assumption, not a consequence of the
+    Fourier structure: the natural involution of the plane
+    $\mathrm{span}\{e_{\xi_c}, e_{q-\xi_c}\}$ is the swap $e_{\xi_c} \leftrightarrow
+    e_{q-\xi_c}$, with eigenvalues $\pm 1$, whereas the central element $-1 \in 2I$ must
+    act as $-\mathbf{1}$ on $V_{1/2}$, so no canonical $2I$-action on the plane is supplied
+    by the Weil structure.
     The two factors of the conjugate pair $\{c,q-c\}$ each carry a copy of $\mathcal{A}_c$,
     and the bipartite proto-state lives on $\mathcal{A}_c\otimes\mathcal{A}_c$.
 
@@ -223,8 +236,8 @@ the Admissible Pair Sector and the Full Residual Rank}
     \end{theorem}
 
     \begin{proof}
-      By (H-carrier) and the definition of the pair sector, the pair sector of each factor is
-      $\mathcal{A}_c\cong V_{1/2}$.
+      By clauses (i) and (ii) of (H-carrier), the pair sector of each factor is
+      $\mathcal{A}_c\cong V_{1/2}$ as a $2I$-module.
       By \emph{Q3}~\cite{Beau2026q3}, Theorem 3.2, applied to $j=\tfrac12$: the invariants of the
       diagonal $2I$-action on $V_{1/2}\otimes V_{1/2}$ form a one-dimensional space (Schur's
       lemma, via $V_{1/2}\otimes V_{1/2}=V_0\oplus V_1$ and irreducibility/self-duality of
@@ -330,8 +343,8 @@ the Admissible Pair Sector and the Full Residual Rank}
     real admissibility pipeline is open (Section~\ref{sec:residual}).
 
     The admissible pair carrier is hypothesised, not derived: (H-carrier) fixes the sector of
-    each factor as the atomic Fourier triple, whose parity-pair component
-    $\{e_{\xi_c},e_{q-\xi_c}\}$ is identified with $V_{1/2}$.
+    each factor as the atomic Fourier triple and, as an explicit clause, identifies its
+    parity-pair component $\{e_{\xi_c},e_{q-\xi_c}\}$ with the $2I$-module $V_{1/2}$.
     Its structural support is the pure-mode form of the selected pipeline directions
     (\emph{Q5a-O2}, Propositions 3.1--3.2) and the parity pairing of conjugate frequencies;
     its rank-three input is a supplied selection rule (\emph{O23}), the pipeline's
