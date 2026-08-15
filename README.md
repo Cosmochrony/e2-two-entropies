@@ -84,7 +84,7 @@ which the present note rests is:
 
 - **Q5a-O2** ([Beau2026q5ao2](https://doi.org/10.5281/zenodo.19915951)): pure Fourier modes of the pre-saturation pipeline (Propositions 3.1--3.2) and the truncation status of the three-coordinate reduction (Proposition 4.1), which motivate (H-carrier) without deriving it;
 - **O23** ([Beau2026a27](https://doi.org/10.5281/zenodo.19375136)): the adjoint-dimension theorem for a supplied spinor carrier; the threshold $\Sigma_c(n_3)=3$ is a supplied selection rule, both bridges open;
-- **O18** ([Beau2026a22](https://doi.org/10.5281/zenodo.19321413)): equivariant Born--Infeld parity and the open fibre-identification problem within which any carrier selection would have to be posed;
+- **O18** ([Beau2026a22](https://doi.org/10.5281/zenodo.19321413)): Born--Infeld parity covariance (even-order responses preserved, odd-order reversed) and the open fibre-identification problem within which any carrier selection would have to be posed;
 - **O17** ([Beau2026a21](https://doi.org/10.5281/zenodo.19299611)): equality of residual dimensions, within its own scalar toy model -- not yet shown to transfer to the real pipeline;
 - **O31** ([Beau2026a35](https://doi.org/10.5281/zenodo.20030491)): the metaplectic dilation, excluded as a bridge for $[\mathrm{H}_{\mathrm{res}}]$;
 - **E1** ([Beau2026ent1](https://doi.org/10.5281/zenodo.20499309)): universal admission orthogonality, matched-block flat Schmidt spectrum, and the open Schmidt-pairing question for general blocks;
