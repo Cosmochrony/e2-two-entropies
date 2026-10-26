@@ -30,7 +30,7 @@
 \title{Two Entanglement Entropies of the Conjugate Weil Pair:\\
 the Admissible Pair Sector and the Full Residual Rank}
 \author{J\'er\^ome Beau}
-\date{June 2026}
+\date{October 2026, Version 2.2}
 
 \begin{document}
 
@@ -63,11 +63,13 @@ the Admissible Pair Sector and the Full Residual Rank}
     The second object is the full residual fibre-level rank $r_{\mathrm{pair}}(n)=R_\infty-R(n)$
     defined on the full Gram--Schmidt basis (rank $q$ at saturation, not the rank-3 admissible
     projection).
-    E1 proves $S_{\mathrm{ent}}(n)=\log(r_{\mathrm{pair}}(n))$ unconditionally for matched
-    single-character blocks -- this is the one unconditional result of the present note; for
-    independently sampled canonical blocks it remains conditional on the residual admissibility
-    indiscernibility hypothesis $[\mathrm{H}_{\mathrm{res}}]$, and on extending \emph{O17}'s
-    equal-residual-dimension result beyond its own toy model to the real admissibility pipeline.
+    For matched single-character blocks, E1 proves the diagonal Schmidt pairing and the flat
+    residual spectrum, hence $S_{\mathrm{ent}}(n)=\log(r_{\mathrm{pair}}(n))$, under a supplied
+    purity of the joint state, which E1 does not derive.
+    For independently sampled canonical blocks, the same entropy rests on the supplied purity, on
+    the residual admissibility indiscernibility hypothesis $[\mathrm{H}_{\mathrm{res}}]$, and on
+    extending \emph{O17}'s equal-residual-dimension result beyond its own toy model to the real
+    admissibility pipeline.
     The metaplectic dilation $\phi_\omega$ is excluded as a bridge for $[\mathrm{H}_{\mathrm{res}}]$
     because it acts between blocks, not within the residual support of one block.
   \end{abstract}
@@ -109,8 +111,8 @@ the Admissible Pair Sector and the Full Residual Rank}
     $2I$-module $V_{1/2}$, which no result of the corpus derives; and
     (H-inv), the diagonal-invariance hypothesis that \emph{Q3} states and leaves open.
     The other is the entropy of the full residual Gram--Schmidt rank, a finer pipeline-level
-    observable; it is unconditional only for matched blocks and otherwise rests on bridge
-    hypotheses of its own.
+    observable; for matched blocks it is proved under a supplied purity of the joint state, which
+    E1 does not derive, and otherwise it rests on bridge hypotheses of its own in addition.
 
   \section{Two distinct objects}
     \label{sec:objects}
@@ -266,14 +268,20 @@ the Admissible Pair Sector and the Full Residual Rank}
     The full residual fibre-level rank $\rpair(n)=R_\infty-R(n)$ is a different object,
     defined on the full Gram--Schmidt basis rather than on $\Pi_q$.
 
-    On matched single-character blocks, E1~\cite{Beau2026ent1} (Theorem~7) proves that the
-    residual Schmidt spectrum is flat and that
+    On matched single-character blocks, E1~\cite{Beau2026ent1} (Theorem~7) proves, under a
+    supplied purity of the joint state, that the residual Schmidt spectrum is flat and that
     \[
       \Sent(n) = \log \rpair(n).
     \]
     The proof uses the sign-reflected Fourier supports $S_{q-c}^{\mathrm{res}}(n)
-  = -S_c^{\mathrm{res}}(n)$, which canonically identify the residual modes of the two factors
-    and yield a maximally entangled residual state.
+  = -S_c^{\mathrm{res}}(n)$, which canonically identify the residual modes of the two factors;
+    given purity, the conjugation identity then selects the diagonal Schmidt pairing and the
+    maximally entangled residual state.
+    E1 does not derive that purity: it exhibits the maximally entangled state as the natural
+    construction compatible with the Fourier-mode structure, and states that the purity clause
+    remains a supplied composition structure.
+    The matched-block result is therefore a theorem conditional on supplied purity, not an
+    unconditional one.
 
     For independently sampled canonical blocks, E1 also shows that this literal mode-by-mode
     identification is not automatic.
@@ -368,11 +376,12 @@ the Admissible Pair Sector and the Full Residual Rank}
     \[
       \Sent(n) = \log \rpair(n)
     \]
-    is unconditional only for matched single-character blocks (E1 Theorem 7) -- the one
-    unconditional result of this note.
-    For independently sampled canonical blocks it remains conditional on $\Hres$, the residual
-    admissibility indiscernibility hypothesis (Definition~\ref{def:hres}), and on extending
-    \emph{O17}'s equal-dimension result to the real pipeline (Section~\ref{sec:residual}).
+    is proved for matched single-character blocks (E1 Theorem 7) only under a supplied purity of
+    the joint state, which E1 does not derive.
+    For independently sampled canonical blocks it rests on that supplied purity together with
+    $\Hres$, the residual admissibility indiscernibility hypothesis (Definition~\ref{def:hres}),
+    and on extending \emph{O17}'s equal-dimension result to the real pipeline
+    (Section~\ref{sec:residual}).
     The metaplectic dilation is excluded as a bridge for $\Hres$ (Remark~\ref{rem:dilation}).
 
     The separation is therefore:
@@ -380,15 +389,17 @@ the Admissible Pair Sector and the Full Residual Rank}
       \text{admissible pair sector, under (H-carrier), (H-inv)}
       &\;\Longrightarrow\;
       \Sadm = \log 2,\\
-      \text{residual-rank sector, matched blocks}
+      \text{residual-rank sector, matched blocks,}\\
+      \text{under a supplied purity}
       &\;\Longrightarrow\;
       \Sent(n) = \log \rpair(n).
     \end{align*}
     The first holds for general canonical blocks, but only conditionally on (H-carrier) and
     (H-inv) jointly.
-    The second holds unconditionally for matched single-character blocks -- the one
-    unconditional result of this note -- and conditionally otherwise, on $\Hres$ together with
-    the O17 transfer gap.
+    The second holds for matched single-character blocks under a supplied purity of the joint
+    state, which E1 does not derive, and otherwise only conditionally, on that purity together
+    with $\Hres$ and the O17 transfer gap.
+    Neither entropy is established unconditionally.
 
     \newpage
     \bibliographystyle{plain}
