@@ -20,7 +20,7 @@ roles, and have different epistemic status.
 | Object | Projection | Rank | Status |
 |---|---|---|---|
 | Admissible pair sector $\mathcal{A}_c$ | Hypothesised atomic triple (rank 3) | 2 (parity-pair component) | Carrier conditional on (H-carrier); proto-state conditional on (H-carrier) and (H-inv) |
-| Residual fibre-level support | Full Gram--Schmidt basis | $r_{\mathrm{pair}}(n) = R_\infty - R(n)$, with $R_\infty = q$ | Unconditional for matched blocks; conditional otherwise |
+| Residual fibre-level support | Full Gram--Schmidt basis | $r_{\mathrm{pair}}(n) = R_\infty - R(n)$, with $R_\infty = q$ | Matched blocks: proved under a supplied purity of the joint state, which E1 does not derive; conditional otherwise |
 
 The admissible pair carrier is fixed by an explicit two-clause hypothesis, **(H-carrier)**:
 (i) the admissible sector of each factor is the atomic Fourier triple
@@ -68,8 +68,8 @@ $\log 2$, holds for **general canonical blocks** only **given both
 
 | Case | Status |
 |---|---|
-| Matched single-character blocks | **Proved** by E1 Theorem 7: $S_{\mathrm{ent}}(n) = \log r_{\mathrm{pair}}(n)$ unconditional -- the one unconditional result of this note |
-| Independently sampled canonical blocks | **Conditional** on $[\mathrm{H}_{\mathrm{res}}]$ (residual admissibility indiscernibility) and on extending O17's equal-residual-dimension result beyond its own toy model to the real admissibility pipeline |
+| Matched single-character blocks | **Proved** by E1 Theorem 7 under a supplied purity of the joint state, which E1 does not derive: $S_{\mathrm{ent}}(n) = \log r_{\mathrm{pair}}(n)$ |
+| Independently sampled canonical blocks | **Conditional** on the same supplied purity, on $[\mathrm{H}_{\mathrm{res}}]$ (residual admissibility indiscernibility) and on extending O17's equal-residual-dimension result beyond its own toy model to the real admissibility pipeline |
 | Metaplectic dilation as bridge for $[\mathrm{H}_{\mathrm{res}}]$ | **Excluded** (acts between blocks, not within the residual support of a single block) |
 
 The hypothesis $[\mathrm{H}_{\mathrm{res}}]$ has a status parallel to the

@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
 title: "Two Entanglement Entropies of the Conjugate Weil Pair: the Admissible Pair Sector and the Full Residual Rank"
 type: software
+version: "2.2"
+date-released: 2026-10-26
 authors:
   - family-names: "Beau"
     given-names: "Jérôme"
