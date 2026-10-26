@@ -89,7 +89,8 @@ which the present note rests is:
 - **O31** ([Beau2026a35](https://doi.org/10.5281/zenodo.20030491)): the metaplectic dilation, excluded as a bridge for $[\mathrm{H}_{\mathrm{res}}]$;
 - **E1** ([Beau2026ent1](https://doi.org/10.5281/zenodo.20499309)): universal admission orthogonality, matched-block flat Schmidt spectrum, and the open Schmidt-pairing question for general blocks;
 - **Q3** ([Beau2026q3](https://doi.org/10.5281/zenodo.19979535)): the diagonal-invariance hypothesis (H-inv) and the unique-singlet theorem conditional on it (Theorem 3.2);
-- **Foundation** ([Beau2026m](https://doi.org/10.5281/zenodo.19616329)): Axiom A3, used in the residual-flatness proof.
+- **Foundation** ([Beau2026m](https://doi.org/10.5281/zenodo.19616329)): Axiom A3 and its non-factorisability lemma, which holds only under an additional sector reading of A3, not
+  derived; the residual-flatness proof uses that reading through (H-res).
 
 ## Build
 
